@@ -1,36 +1,38 @@
-# Assignment 3 - Basic SQL Queries
+# Assignment4 - Summary Queries and Subqueries
+
 
 1. Copy the URL for this repository and clone it to your front server home  directory: `git clone url`  where `url` is the URL for this repository
-2. Open the sql script file `assign3.sql` in a remote file editor
-3. Write the queries using the `buildings` database and paste the solutions to the following exercises in the `assign3.sql` file
-4.  When you've completed the exercises, save the `assign3.sql` file.  Commit and push your solutions to GitHub.
+2. Open the sql script file `assign4.sql` in a remote file editor
+3. Write the queries using the `movie_ratings` database and paste the solutions to the following exercises in the `assign3.sql` file
+4.  When you've completed the exercises, save the `assign4.sql` file.  Commit and push your solutions to GitHub.
 ```
-cd assign3
+cd assign4
 git add .
-git commit -m "completed assignment 3"
+git commit -m "completed assignment 4"
 git push
 ```
 
+
 ## Exercise 1
-Find the name, city, country and height of all skyscrapers. Run this statement to make sure it works correctly.  Add an ORDER BY clause to statement that sorts the result set by year completed in descending sequence. Then, run this statement again to make sure it works correctly. This is a good way to build and test a statement, one clause at a time.  Submit the final query.
+Find the number of distinct movies that were rated from the 'Rating' table using a summary query.
 
 ## Exercise 2
-List all skyscrapers in Peoria.  Include building name, year completed and height in the result set
+Find the number of ratings for 4-star movies.
 
 ## Exercise 3
-Find the name,  city and number of floors for all skyscrapers taller than  400 ft.
+Find the date of the most recent review.
 
 ## Exercise 4
-List all *completed* Skyscrapers in Nashville.
+Find the date of the first four-star review.
 
 ## Exercise 5
-Find the name and city of all buildings built with steel and concrete.  Note that there are two material types which match this description.  Sort the results in ascending order by building name.
+List each reviewerID and the number of movies reviewed.
 
 ## Exercise 6
-Find the name, city and number of floors for skyscrapers that were completed before 1900. Do not include incomplete skyscrapers (year completed = 0).  Order by height in ascending order.
+List the reviewer ids for reviewers with more than 1 review.
 
 ## Exercise 7
-List all abandoned skyscrapers in order by city and within each city by date completed.
+Use a subquery to list all reviews for the Movie "Gone with the Wind".
 
 ## Exercise 8
-Find all materials that have been used to build skyscrapers. Include only material type in ascending order and be sure that each material appears only a single time.
+Find the names of all reviewers who rated a movie four-stars or higher using a subquery.
