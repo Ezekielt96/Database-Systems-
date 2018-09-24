@@ -1,54 +1,36 @@
-# Lab 1 - SQL Select Queries
+# Assignment 3 - Basic SQL Queries
 
-## Completing this assignment on the CaMS Front Server
-1. Log into the front server using [Putty ](https://www.putty.org/)(Windows) or Terminal (Mac)
-	- if you don't already have an account, set one up using these directions: [Front Server Setup](https://1drv.ms/b/s!Asn_r9P-WxNPh50thrxn9jlMxlUrMg)
-2. Clone the  assignment from GitHub  ` git clone url` where `url` is the URL of your GitHub repository
-3. Open the `lab1.sql` script file using [WinSCP](https://winscp.net/eng/index.php)(Windows) or [Cyberduck](https://cyberduck.io/)(Mac)
-2. On the server, log into the mysql command line using the command `mysql -p `
-	- Password is your id# with  a "2" replacing the "L"
-2. Copy each query from the mysql command line and paste into the script file open in WinSCP or Cyberduck.
-4.  When you've completed the exercises, save the `lab1.sql` file to the front server.
-5.  On the server, commit and push your solutions to GitHub.
+1. Copy the URL for this repository and clone it to your front server home  directory: `git clone url`  where `url` is the URL for this repository
+2. Open the sql script file `assign3.sql` in a remote file editor
+3. Write the queries using the `buildings` database and paste the solutions to the following exercises in the `assign3.sql` file
+4.  When you've completed the exercises, save the `assign3.sql` file.  Commit and push your solutions to GitHub.
 ```
-cd lab1
+cd assign3
 git add .
-git commit -m "completed lab 1"
+git commit -m "completed assignment 3"
 git push
 ```
 
-## Exercise 1 - Basic `SELECT` statements
-- Select the property number, type and rent from the `propertyForRent` table
-- Select all fields from the `branch` table
-- Select the name and phone of all clients
+## Exercise 1
+Find the name, city, country and height of all skyscrapers. Run this statement to make sure it works correctly.  Add an ORDER BY clause to statement that sorts the result set by year completed in descending sequence. Then, run this statement again to make sure it works correctly. This is a good way to build and test a statement, one clause at a time.  Submit the final query.
 
-## Exercise 2 - Calculated Values
-Write a `SELECT` statement that returns this data from the `propertyForRent` table
-- property number
-- street address
-- city
-- type
-- rent (alias monthlyRent)
-- rent * 12 (alias annualRent)
+## Exercise 2
+List all skyscrapers in Peoria.  Include building name, year completed and height in the result set
 
-## Exercise 3 - String Manipulation
-Write a `SELECT` statement that returns one column from the `staff` table named fullName that joins the staff member's first name and last like this:
-`Doe, John`
+## Exercise 3
+Find the name,  city and number of floors for all skyscrapers taller than  400 ft.
 
-## Exercise 4 - Comparison
-Write queries to:
-- Find all property for rent with rent less than  or equal to $400
-- Find all clients looking to rent a house
-- Select all viewings since `2015-05-15`
+## Exercise 4
+List all *completed* Skyscrapers in Nashville.
 
-## Exercise 5 - Compound Comparisons
-Write queries to:
-- Find the first name, last name and branch number of all assistants whose salary is $9,000
-- Find property for rent in Glasgow with rent less than $400
-- Select all viewings in the month of April 2015
+## Exercise 5
+Find the name and city of all buildings built with steel and concrete.  Note that there are two material types which match this description.  Sort the results in ascending order by building name.
 
-## Exercise 6 - Sorting
-Write queries to:
-- Select viewings in ascending order by `viewDate`
-- Select viewings in descending order by `viewDate`
-- Select viewings and display by client and within each client display by `viewDate`
+## Exercise 6
+Find the name, city and number of floors for skyscrapers that were completed before 1900. Do not include incomplete skyscrapers (year completed = 0).  Order by height in ascending order.
+
+## Exercise 7
+List all abandoned skyscrapers in order by city and within each city by date completed.
+
+## Exercise 8
+Find all materials that have been used to build skyscrapers. Include only material type in ascending order and be sure that each material appears only a single time.
